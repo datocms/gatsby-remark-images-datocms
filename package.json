@@ -1,0 +1,14 @@
+{
+  "name": "gatsby-remark-images-datocms",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "cheerio": "^1.0.0-rc.3",
+    "datocms-client": "^0.8.15",
+    "fs-extra": "^7.0.1",
+    "gatsby-source-datocms": "2.1.0-beta.1",
+    "node-fetch": "^2.3.0",
+    "unist-util-select": "^2.0.0"
+  }
+}
