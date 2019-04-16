@@ -31,6 +31,8 @@ plugins: [
         {
           resolve: `gatsby-remark-images-datocms`,
           options: {
+            // You need to specify your project read-only API token here!
+            apiToken: 'XXXXX',
             // It's important to specify the maxWidth (in pixels) of
             // the content container as this plugin uses this as the
             // base for generating different widths of each image.
