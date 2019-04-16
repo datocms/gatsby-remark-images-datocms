@@ -1,6 +1,6 @@
 {
   "name": "gatsby-remark-images-datocms",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "main": "index.js",
   "license": "MIT",
   "dependencies": {
@@ -8,7 +8,29 @@
     "datocms-client": "^0.8.15",
     "fs-extra": "^7.0.1",
     "gatsby-source-datocms": "2.1.0-beta.1",
+    "md5": "^2.2.1",
     "node-fetch": "^2.3.0",
+    "query-string": "^6.4.2",
     "unist-util-select": "^2.0.0"
-  }
+  },
+  "devDependencies": {
+    "babel-cli": "6.26.0",
+    "babel-plugin-transform-object-rest-spread": "6.26.0",
+    "babel-preset-env": "1.6.1",
+    "cross-env": "^5.0.5",
+    "np": "^3.0.4"
+  },
+  "scripts": {
+    "build": "babel src --out-dir . --ignore __tests__",
+    "watch": "babel -w src --out-dir . --ignore __tests__",
+    "prepublish": "cross-env NODE_ENV=production npm run build",
+    "test": "echo 1"
+  },
+  "keywords": [
+    "gatsby",
+    "gatsby-plugin",
+    "datocms",
+    "images"
+  ],
+  "author": "DatoCMS <support@datocms.com>"
 }
