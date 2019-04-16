@@ -7,7 +7,6 @@
     "cheerio": "^1.0.0-rc.3",
     "datocms-client": "^0.8.15",
     "fs-extra": "^7.0.1",
-    "gatsby-source-datocms": "~2.1.0",
     "md5": "^2.2.1",
     "node-fetch": "^2.3.0",
     "query-string": "^6.4.2",
@@ -19,6 +18,9 @@
     "babel-preset-env": "1.6.1",
     "cross-env": "^5.0.5",
     "np": "^3.0.4"
+  },
+  "peerDependencies": {
+    "gatsby-source-datocms": "~2.1.0"
   },
   "scripts": {
     "build": "babel src --out-dir . --ignore __tests__",
