@@ -12,7 +12,7 @@ module.exports = async (
     apiToken,
     maxWidth = 650,
     tracedSVG = false,
-    backgroundColor = 'white',
+    backgroundColor = 'transparent',
     wrapperStyle = '',
     showCaptions = false,
     linkImagesToOriginal = true,
