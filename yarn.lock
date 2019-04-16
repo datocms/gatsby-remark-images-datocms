@@ -1310,10 +1310,10 @@ date-fns@^1.27.2:
   resolved "https://registry.yarnpkg.com/date-fns/-/date-fns-1.30.1.tgz#2e71bf0b119153dbb4cc4e88d9ea5acfb50dc05c"
   integrity sha512-hBSVCvSmWC+QypYObzwGOd9wqdDpOt+0wl0KbU+R+uuZBS1jN8VsD1ss3irQDknRj5NvxiTF6oj/nDRnN/UQNw==
 
-datocms-client@1.0.0-beta.0:
-  version "1.0.0-beta.0"
-  resolved "https://registry.yarnpkg.com/datocms-client/-/datocms-client-1.0.0-beta.0.tgz#6084c5fb6c8b8672c06a0d991083817a72ec0350"
-  integrity sha512-mLq5ApnTOmIQlDoDvgHr7ckn4OV5Wo3wZ/zXvjFkOsp2GWOb6Yphwu9O2Zn85Yb9f4VvEeYoCsOlGB50UGOW3A==
+datocms-client@^0.8.15:
+  version "0.8.15"
+  resolved "https://registry.yarnpkg.com/datocms-client/-/datocms-client-0.8.15.tgz#417e9454cda7adca147f8659d17f27b7c3296db9"
+  integrity sha512-sa4e4dGG26U/lutX1spsiUCAzKiEcW1EKMHYhA3YNfcyoER6LAtlPqvUSZ+Qeuu1/mDnhdVL2MUIy2ypbKPJ9A==
   dependencies:
     arr-diff "^4.0.0"
     babel-polyfill "^6.26.0"
@@ -1350,10 +1350,10 @@ datocms-client@1.0.0-beta.0:
     updeep "^1.0.0"
     wpapi "^1.1.2"
 
-datocms-client@^0.8.15:
-  version "0.8.15"
-  resolved "https://registry.yarnpkg.com/datocms-client/-/datocms-client-0.8.15.tgz#417e9454cda7adca147f8659d17f27b7c3296db9"
-  integrity sha512-sa4e4dGG26U/lutX1spsiUCAzKiEcW1EKMHYhA3YNfcyoER6LAtlPqvUSZ+Qeuu1/mDnhdVL2MUIy2ypbKPJ9A==
+datocms-client@~1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/datocms-client/-/datocms-client-1.0.0.tgz#d32e0d2a48d88cbaea23f9fac2bb8ae6826e0f4d"
+  integrity sha512-DtPv5HIcjftuj4Y4Igsm1CkpCcwAsA0S3hrrIPEJy3tybK2vHB/0C5qqYJP3eTJSVENUPTkVVBsFOOiIGOtpzw==
   dependencies:
     arr-diff "^4.0.0"
     babel-polyfill "^6.26.0"
@@ -2006,14 +2006,14 @@ function-bind@^1.1.1:
   resolved "https://registry.yarnpkg.com/function-bind/-/function-bind-1.1.1.tgz#a56899d3ea3c9bab874bb9773b7c5ede92f4895d"
   integrity sha512-yIovAzMX49sF8Yl58fSCWJ5svSLuaibPxXQJFLmBObTuCr0Mf1KiPopGM9NiFjiYBCbfaa2Fh6breQ6ANVTI0A==
 
-gatsby-source-datocms@2.1.0-beta.1:
-  version "2.1.0-beta.1"
-  resolved "https://registry.yarnpkg.com/gatsby-source-datocms/-/gatsby-source-datocms-2.1.0-beta.1.tgz#946fc5f7e98d7018ece2d86c7ccaa6779f51c651"
-  integrity sha512-jnZ5+dJiJRe1SyH+z0DLn/X6mWa2bSFyazN6f9ElLZzRJFVP2nz9ZFnYbFuicwS3K72/LdSgYAxgGbmuWP249Q==
+gatsby-source-datocms@~2.1.0:
+  version "2.1.1"
+  resolved "https://registry.yarnpkg.com/gatsby-source-datocms/-/gatsby-source-datocms-2.1.1.tgz#beedf901a8ac0b1e64b62a956ccbbf87a630aa02"
+  integrity sha512-Tt+1n3d/5LDrTTaaIu22NLcCOG/WoLD9chR3c4SVttguuNufkvCBjcw9rLRhOfe6/ia8+nRUDr4uLbE6apEawg==
   dependencies:
     babel-polyfill "^6.26.0"
     babel-runtime "^6.26.0"
-    datocms-client "1.0.0-beta.0"
+    datocms-client "~1.0.0"
     fs-extra ">=4.0.2"
     humps ">=2.0.1"
     imgix-url-params "7.4.0"
