@@ -12,7 +12,7 @@ module.exports = async function replace(node, cacheDir, options) {
   const { resolve } = fluidResolver(cacheDir);
   const { maxWidth, tracedSVG, convertGifsToVideo, showCaptions } = options;
 
-  const imgixParams = qs.parse(node.url);
+  const imgixParams = qs.parse(node.url.split('?')[1]);
 
   const {
     PixelHeight: height,
