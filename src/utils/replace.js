@@ -1,15 +1,16 @@
 const qs = require('query-string');
 
-const fluidResolver = require('gatsby-source-datocms/hooks/setFieldsOnGraphQLNodeType/nodes/upload/fluidResolver');
-const getBase64 = require('gatsby-source-datocms/hooks/setFieldsOnGraphQLNodeType/nodes/upload/utils/getBase64');
-const getTracedSVG = require('gatsby-source-datocms/hooks/setFieldsOnGraphQLNodeType/nodes/upload/utils/getTracedSVG');
+const buildFluidFields = require('gatsby-source-datocms/hooks/sourceNodes/createTypes/utils/buildFluidFields');
+const getBase64 = require('hooks/sourceNodes/createTypes/utils/getBase64');
+const getTracedSVG = require('gatsby-source-datocms/hooks/sourceNodes/createTypes/utils/getTracedSVG');
 
 const getMetadata = require('./getMetadata');
 const imageHtml = require('./imageHtml');
 const videoHtml = require('./videoHtml');
 
+const { resolve } = buildFluidFields().fluid;
+
 module.exports = async function replace(node, cacheDir, options) {
-  const { resolve } = fluidResolver(cacheDir);
   const { maxWidth, tracedSVG, convertGifsToVideo, showCaptions } = options;
 
   const imgixParams = qs.parse(node.url.split('?')[1]);
