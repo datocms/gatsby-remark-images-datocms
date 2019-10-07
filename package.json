@@ -21,7 +21,7 @@
     "np": "^3.0.4"
   },
   "peerDependencies": {
-    "gatsby-source-datocms": "~2.1.17-1"
+    "gatsby-source-datocms": "~2.1.17"
   },
   "scripts": {
     "build": "babel src --out-dir . --ignore __tests__",
