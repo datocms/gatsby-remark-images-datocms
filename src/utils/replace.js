@@ -1,7 +1,7 @@
 const qs = require('query-string');
 
 const buildFluidFields = require('gatsby-source-datocms/hooks/sourceNodes/createTypes/utils/buildFluidFields');
-const getBase64 = require('hooks/sourceNodes/createTypes/utils/getBase64');
+const getBase64 = require('gatsby-source-datocms/hooks/sourceNodes/createTypes/utils/getBase64');
 const getTracedSVG = require('gatsby-source-datocms/hooks/sourceNodes/createTypes/utils/getTracedSVG');
 
 const getMetadata = require('./getMetadata');
