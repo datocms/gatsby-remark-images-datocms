@@ -5,7 +5,7 @@
   "license": "MIT",
   "dependencies": {
     "cheerio": "^1.0.0-rc.3",
-    "datocms-client": "^0.8.15",
+    "datocms-client": "^3.0.10",
     "fs-extra": "^7.0.1",
     "md5": "^2.2.1",
     "node-fetch": "^2.3.0",
@@ -18,7 +18,7 @@
     "@babel/plugin-proposal-object-rest-spread": "7.6.2",
     "@babel/preset-env": "^7.6.2",
     "cross-env": "^5.0.5",
-    "np": "^3.0.4"
+    "np": "^5.2.1"
   },
   "peerDependencies": {
     "gatsby-source-datocms": "~2.1.17"
