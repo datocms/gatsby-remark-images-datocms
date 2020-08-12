@@ -45,7 +45,7 @@ plugins: [
 ]
 ```
 An example of displaying markdown in a blog component. Where a single `post` has a `content` field.
-```javascript
+```JSX
 export default ({ data }) => {
   const post = data.datoCmsBlog;
   return (
