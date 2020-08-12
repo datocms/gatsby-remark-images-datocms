@@ -16,7 +16,7 @@ In the processing, it makes images responsive by:
 
 ## Install
 
-`npm install --save gatsby-remark-images-datocms`
+`npm install --save gatsby-remark-images-datocms gatsby-transformer-remark gatsby-plugin-sharp`
 
 ## How to use
 
