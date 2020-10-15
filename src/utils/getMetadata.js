@@ -25,4 +25,4 @@ module.exports = async function getMetadata(src, cacheDir) {
   console.log('ERROR', src, url.href);
 
   throw res.status;
-}
+};

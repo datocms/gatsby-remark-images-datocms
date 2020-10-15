@@ -17,19 +17,29 @@ module.exports = async (
     showCaptions = false,
     linkImagesToOriginal = true,
     convertGifsToVideo = true,
-  }
+  },
 ) => {
-  const options = { maxWidth, tracedSVG, backgroundColor, wrapperStyle, showCaptions, linkImagesToOriginal, convertGifsToVideo };
-  const cacheDir = `${store.getState().program.directory}/.cache/datocms-assets`;
+  const options = {
+    maxWidth,
+    tracedSVG,
+    backgroundColor,
+    wrapperStyle,
+    showCaptions,
+    linkImagesToOriginal,
+    convertGifsToVideo,
+  };
+  const cacheDir = `${
+    store.getState().program.directory
+  }/.cache/datocms-assets`;
 
-  if (!fs.existsSync(cacheDir)){
+  if (!fs.existsSync(cacheDir)) {
     fs.mkdirSync(cacheDir);
   }
 
   const imgixHost = await assetsHost.get(apiToken);
 
   const imageNodes = selectAll('image', markdownAST);
-  const htmlNodes = selectAll('html', markdownAST)
+  const htmlNodes = selectAll('html', markdownAST);
 
   for (const node of imageNodes) {
     if (!hostEquals(node.url, imgixHost)) {
@@ -49,8 +59,8 @@ module.exports = async (
 
     const $ = cheerio.load(node.value);
 
-    const images = []
-    $('img').each(function() {
+    const images = [];
+    $('img').each(function () {
       const url = $(this).attr('src');
 
       if (!hostEquals(url, imgixHost)) {
@@ -73,4 +83,4 @@ module.exports = async (
 
     node.value = $(`body`).html();
   }
-}
+};

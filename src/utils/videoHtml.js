@@ -1,4 +1,10 @@
-module.exports = ({ originalImage: { url }, maxWidth, base64, resolvedImage: { aspectRatio }, wrapperStyle }) => (
+module.exports = ({
+  originalImage: { url },
+  maxWidth,
+  base64,
+  resolvedImage: { aspectRatio },
+  wrapperStyle,
+}) =>
   `
     <span
       class="gatsby-resp-video-wrapper"
@@ -6,7 +12,9 @@ module.exports = ({ originalImage: { url }, maxWidth, base64, resolvedImage: { a
     >
       <span
         class="gatsby-resp-video-background-image"
-        style="padding-bottom: ${(1 / aspectRatio) * 100}%; position: relative; bottom: 0; left: 0; background-image: url('${base64}'); background-size: cover; display: block;"
+        style="padding-bottom: ${
+          (1 / aspectRatio) * 100
+        }%; position: relative; bottom: 0; left: 0; background-image: url('${base64}'); background-size: cover; display: block;"
       ></span>
       <video
         class="gatsby-resp-video-video"
@@ -18,5 +26,4 @@ module.exports = ({ originalImage: { url }, maxWidth, base64, resolvedImage: { a
         <source src="${url}?fm=mp4&fit=max&w=${maxWidth}" type="video/mp4" />
       </video>
     </span>
-  `.trim()
-);
+  `.trim();
