@@ -35,7 +35,7 @@ module.exports = ({
     return `
       <a
         class="gatsby-resp-image-link"
-        href="${originalImage.url}"
+        href="${originalImage.entityPayload.attributes.url}"
         style="display: block"
         target="_blank"
         rel="noopener"

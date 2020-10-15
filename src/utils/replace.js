@@ -24,10 +24,14 @@ module.exports = async function replace(node, cacheDir, options) {
   const format = contentType.replace(/^image\//, '');
 
   const image = {
-    url: node.url.split(/[?#]/)[0],
-    width,
-    height,
-    format,
+    entityPayload: {
+      attributes: {
+        url: node.url.split(/[?#]/)[0],
+        width,
+        height,
+        format,
+      },
+    },
   };
 
   const resolvedImage = resolve(image, { maxWidth, imgixParams });

@@ -28,6 +28,7 @@ module.exports = async (
     linkImagesToOriginal,
     convertGifsToVideo,
   };
+
   const cacheDir = `${
     store.getState().program.directory
   }/.cache/datocms-assets`;
