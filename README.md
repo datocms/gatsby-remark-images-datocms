@@ -1,3 +1,5 @@
+![Node.js CI](https://github.com/datocms/gatsby-remark-images-datocms/workflows/Node.js%20CI/badge.svg)
+
 # gatsby-remark-images-datocms
 
 Processes images in markdown so they can be used in the production build using DatoCMS's built-in CDN.
