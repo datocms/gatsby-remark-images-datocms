@@ -1,4 +1,13 @@
-module.exports = ({ originalImage, title, alt, base64, resolvedImage: { width, src, srcSet, sizes, aspectRatio }, backgroundColor, wrapperStyle, linkImagesToOriginal }) => {
+module.exports = ({
+  originalImage,
+  title,
+  alt,
+  base64,
+  resolvedImage: { width, src, srcSet, sizes, aspectRatio },
+  backgroundColor,
+  wrapperStyle,
+  linkImagesToOriginal,
+}) => {
   const html = `
     <span
       class="gatsby-resp-image-wrapper"
@@ -6,7 +15,9 @@ module.exports = ({ originalImage, title, alt, base64, resolvedImage: { width, s
     >
       <span
         class="gatsby-resp-image-background-image"
-        style="padding-bottom: ${(1 / aspectRatio) * 100}%; position: relative; bottom: 0; left: 0; background-image: url('${base64}'); background-size: cover; display: block;"
+        style="padding-bottom: ${
+          (1 / aspectRatio) * 100
+        }%; position: relative; bottom: 0; left: 0; background-image: url('${base64}'); background-size: cover; display: block;"
       ></span>
       <img
         class="gatsby-resp-image-image"
@@ -24,7 +35,7 @@ module.exports = ({ originalImage, title, alt, base64, resolvedImage: { width, s
     return `
       <a
         class="gatsby-resp-image-link"
-        href="${originalImage.url}"
+        href="${originalImage.entityPayload.attributes.url}"
         style="display: block"
         target="_blank"
         rel="noopener"

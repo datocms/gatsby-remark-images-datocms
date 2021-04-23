@@ -5,9 +5,9 @@ module.exports = function hostEquals(src, host) {
 
   try {
     url = new URL(src);
-  } catch(e) {
+  } catch (e) {
     return false;
   }
 
   return url.host === host;
-}
+};

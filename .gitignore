@@ -1,4 +1,7 @@
-node_modules
-utils
-index.js
-gatsby-browser.js
+/node_modules
+/utils
+/index.js
+/gatsby-browser.js
+/test/fixtures/sample-gatsby-structure/.cache
+/test/fixtures/sample-gatsby-structure/node_modules
+/test/fixtures/sample-gatsby-structure/public

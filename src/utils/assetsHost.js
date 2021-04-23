@@ -13,5 +13,5 @@ module.exports = {
     this.value = imgixHost;
 
     return imgixHost;
-  }
+  },
 };

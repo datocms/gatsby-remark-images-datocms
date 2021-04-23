@@ -18,31 +18,39 @@ module.exports = async function replace(node, cacheDir, options) {
   const {
     PixelHeight: height,
     PixelWidth: width,
-    'Content-Type': contentType
+    'Content-Type': contentType,
   } = await getMetadata(node.url, cacheDir);
 
   const format = contentType.replace(/^image\//, '');
 
   const image = {
-    url: node.url.split(/[?#]/)[0],
-    width,
-    height,
-    format,
+    entityPayload: {
+      attributes: {
+        url: node.url.split(/[?#]/)[0],
+        width,
+        height,
+        format,
+        is_image: true,
+      },
+    },
   };
 
   const resolvedImage = resolve(image, { maxWidth, imgixParams });
-  const base64 = tracedSVG ?
-    await getTracedSVG(resolvedImage, cacheDir) :
-    await getBase64(resolvedImage, cacheDir);
+
+  const base64 = tracedSVG
+    ? await getTracedSVG(resolvedImage, cacheDir)
+    : await getBase64(resolvedImage, cacheDir);
 
   const htmlOptions = Object.assign(
     { title: node.title, alt: node.alt },
     { originalImage: image, base64, resolvedImage },
-    options
+    options,
   );
 
-  const html = format === 'gif' && convertGifsToVideo ?
-    videoHtml(htmlOptions) : imageHtml(htmlOptions);
+  const html =
+    format === 'gif' && convertGifsToVideo
+      ? videoHtml(htmlOptions)
+      : imageHtml(htmlOptions);
 
   if (!showCaptions || !node.title) {
     return html;
@@ -54,4 +62,4 @@ module.exports = async function replace(node, cacheDir, options) {
       <figcaption class="gatsby-resp-image-figcaption">${node.title}</figcaption>
     </figure>
   `;
-}
+};

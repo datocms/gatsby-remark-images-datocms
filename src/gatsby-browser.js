@@ -4,7 +4,9 @@ exports.onRouteUpdate = () => {
   for (let i = 0; i < videoWrappers.length; i++) {
     const videoWrapper = videoWrappers[i];
 
-    const backgroundElement = videoWrapper.querySelector('.gatsby-resp-video-background-image');
+    const backgroundElement = videoWrapper.querySelector(
+      '.gatsby-resp-video-background-image',
+    );
     const videoElement = videoWrapper.querySelector('.gatsby-resp-video-video');
 
     const onLoadedData = () => {
@@ -13,7 +15,7 @@ exports.onRouteUpdate = () => {
       videoElement.style.transition = 'opacity 0.5s';
       videoElement.style.opacity = 1;
       videoElement.removeEventListener('loadeddata', onLoadedData);
-    }
+    };
 
     if (videoElement.readyState === 4) {
       backgroundElement.style.opacity = 0;
@@ -22,4 +24,4 @@ exports.onRouteUpdate = () => {
       videoElement.addEventListener('loadeddata', onLoadedData);
     }
   }
-}
+};
