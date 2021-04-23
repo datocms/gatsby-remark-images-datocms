@@ -30,11 +30,13 @@ module.exports = async function replace(node, cacheDir, options) {
         width,
         height,
         format,
+        is_image: true,
       },
     },
   };
 
   const resolvedImage = resolve(image, { maxWidth, imgixParams });
+
   const base64 = tracedSVG
     ? await getTracedSVG(resolvedImage, cacheDir)
     : await getBase64(resolvedImage, cacheDir);
