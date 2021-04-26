@@ -34,7 +34,7 @@
     "uvu": "^0.3.4"
   },
   "peerDependencies": {
-    "gatsby-source-datocms": "~2.5.7"
+    "gatsby-source-datocms": "^2.5.7"
   },
   "scripts": {
     "prettier": "prettier --write \"src/**/*.{js,jsx}\"",
