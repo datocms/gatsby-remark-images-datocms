@@ -17,7 +17,9 @@ module.exports = ({
         class="gatsby-resp-image-background-image"
         style="padding-bottom: ${
           (1 / aspectRatio) * 100
-        }%; position: relative; bottom: 0; left: 0; background-image: url('${base64}'); background-size: cover; display: block;"
+        }%; position: relative; bottom: 0; left: 0; background-image: ${
+    base64 ? `url(${base64})` : `none`
+  }; background-size: cover; display: block;"
       ></span>
       <img
         class="gatsby-resp-image-image"
