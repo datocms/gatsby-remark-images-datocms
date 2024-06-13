@@ -24,7 +24,7 @@ In the processing, it makes images responsive by:
 
 ## Install
 
-`npm install --save gatsby-remark-images-datocms`
+`npm install --save gatsby-remark-images-datocms gatsby-transformer-remark gatsby-plugin-sharp`
 
 ## How to use
 
@@ -52,7 +52,37 @@ plugins: [
   },
 ]
 ```
+An example of displaying markdown in a blog component. Where a single `post` has a `content` field.
+```JSX
+export default ({ data }) => {
+  const post = data.datoCmsBlog;
+  return (
+      <div>
+        {/* Before */}
+        {/* <div dangerouslySetInnerHTML={{ __html: post.content }}  /> */}
 
+         {/* After */}
+        <div dangerouslySetInnerHTML={{ __html: post.contentNode.childMarkdownRemark.html }} />
+      </div>
+  );
+};
+
+export const query = graphql`
+query($slug: String!) {
+    datoCmsBlog(slug: { eq: $slug }) {
+    //  Before
+      content
+    // After
+      contentNode {
+        childMarkdownRemark {
+          html
+        }
+      }
+    }
+  }
+`;
+```
+-----
 ## Options
 
 | Name                   | Default       | Description                                                                                                                                                                                                                                                                                                                                                                                                                              |
