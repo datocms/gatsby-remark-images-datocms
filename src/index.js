@@ -17,6 +17,7 @@ module.exports = async (
     showCaptions = false,
     linkImagesToOriginal = true,
     convertGifsToVideo = true,
+    loading = 'auto',
   },
 ) => {
   const options = {
@@ -27,6 +28,7 @@ module.exports = async (
     showCaptions,
     linkImagesToOriginal,
     convertGifsToVideo,
+    loading,
   };
 
   const cacheDir = `${
