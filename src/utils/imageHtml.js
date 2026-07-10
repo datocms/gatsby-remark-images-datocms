@@ -2,6 +2,7 @@ module.exports = ({
   originalImage,
   title,
   alt,
+  loading,
   base64,
   resolvedImage: { width, src, srcSet, sizes, aspectRatio },
   backgroundColor,
@@ -27,6 +28,7 @@ module.exports = ({
         alt="${alt || ''}"
         srcset="${srcSet}"
         sizes="${sizes}"
+        loading="${loading}"
       />
     </span>
   `.trim();
